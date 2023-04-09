@@ -1,3 +1,12 @@
+<?php
+$time = date('G');
+if ($time > 10 && $time < 22) {
+    $time = "../style/style.css";
+} else {
+    $time = "../style/style_night.css";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -5,12 +14,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="<?=$time?>">
 	<link rel="stylesheet" href="../style/media0_360.css">
 	<link rel="stylesheet" href="../style/media361_576.css">
 	<link rel="stylesheet" href="../style/media577_768.css">
-	<link rel="stylesheet" href="../style/media769_1200.css">
-	<link rel="stylesheet" href="../style/media_over1201.css">
+	<link rel="stylesheet" href="../media577_768.css">
+	<!-- <link rel="stylesheet" href="../style/media_over1201.css"> -->
+	<style>
+		<?php $time?>
+	</style>
 	<title>Моя первая страничка</title>
 </head>
 
@@ -18,15 +30,13 @@
 	<header>
 		<div class="menu">
 			<div>
-				<a class="menu_top" href="../site/homework.html" target="_parent"
-					title="Тут задания которые не успели выполнить на уроке">ДЗ</a>
+				<a class="menu_top" href="../site/homework.php" target="_parent" title="Тут задания которые не успели выполнить на уроке">ДЗ</a>
 			</div>
 			<div>
-				<a class="menu_top" href="../site/table_mendeleev.html" target="_blank"
-					title="Посмотрим как выглядит Таблица Менделеева? Давай быстрее кликай">Таблица менделеева</a>
+				<a class="menu_top" href="../site/table_mendeleev.php" target="_blank" title="Посмотрим как выглядит Таблица Менделеева? Давай быстрее кликай">Таблица менделеева</a>
 			</div>
 			<div>
-				<a class="menu_top_registrations" href="../site/registrations.html" target="_self">Регистрация</a>
+				<a class="menu_top_registrations" href="../site/registrations.php" target="_self">Регистрация</a>
 			</div>
 		</div>
 	</header>
@@ -76,8 +86,7 @@
 	<div class="info_hobby">
 		<!-- <div><p class="razdel_zagolovok">Любимы игры</p></div> -->
 		<div class="game_left">
-			<div class="game1"><img id="AC" src="../img/AC.jpg" title="Assassin'sCreed"
-					alt="Упс! Попробуй обновить страницу =)"></div>
+			<div class="game1"><img id="AC" src="../img/AC.jpg" title="Assassin'sCreed" alt="Упс! Попробуй обновить страницу =)"></div>
 			<div class="text_game">Действие игр серии Assassins Creed происходит в разные эпохи в истории человечества
 				и в разных странах, на фоне различных исторических событий, таких как Третий крестовый поход или Великая
 				французская революция, с добавлением тем научной фантастики, мифологии и криптоистории. Объединяющий
@@ -87,8 +96,7 @@
 			</div>
 		</div>
 		<div class="game_right">
-			<div class="game1"><img id="NMS" src="../img/NoMan'sSky.jpeg" title="No Man's Sky"
-					alt="Упс! Попробуй обновить страницу =)"></div>
+			<div class="game1"><img id="NMS" src="../img/NoMan'sSky.jpeg" title="No Man's Sky" alt="Упс! Попробуй обновить страницу =)"></div>
 			<div class="text_game">Игра предлагает игроку исследовать виртуальную вселенную
 				чрезвычайно больших размеров, состоящую 18 квинтиллионов планет; возможные занятия для
 				игровых персонажей включают в себя поиск новых интересных мест, выживание на фоне различных
@@ -98,8 +106,7 @@
 			</div>
 		</div>
 		<div class="game_left">
-			<div class="game1"><img id="TWWH" src="../img/TheWitcher3.jpeg" title="The Witcher 3"
-					alt="Упс! Попробуй обновить страницу =)"></div>
+			<div class="game1"><img id="TWWH" src="../img/TheWitcher3.jpeg" title="The Witcher 3" alt="Упс! Попробуй обновить страницу =)"></div>
 			<div class="text_game">Игра в стиле фэнтези, мир которой основан на славянской мифологии,
 				повествует о ведьмаке Геральте из Ривии, охотнике на чудовищ, чья приёмная дочь Цири находится в
 				опасности, будучи преследуемой Дикой Охотой - загадочной потусторонней силой. Многие детали сюжета
@@ -108,8 +115,7 @@
 				вышедшей восемью годами ранее.</div>
 		</div>
 		<div class="game_right">
-			<div class="game1"><img id="SC" src="../img/Splintercell.jpeg" title="Splinter Cell"
-					alt="Упс! Попробуй обновить страницу =)"></div>
+			<div class="game1"><img id="SC" src="../img/Splintercell.jpeg" title="Splinter Cell" alt="Упс! Попробуй обновить страницу =)"></div>
 			<div class="text_game">Серия компьютерных игр в жанре стелс-экшена, курировавшаяся американским писателем
 				Томом Клэнси. Благодаря успеху серии в её составе представлено уже несколько игр и книг по мотивам.
 				Главный герой серии - Сэм Фишер, специальный агент вымышленного подразделения АНБ «Третий эшелон» (позже
@@ -124,8 +130,7 @@
 	</div>
 	<div class="interests_osnova">
 		<div class="interests">
-			<div class="art1"><img src="../img/StarWars.jpg" id="starwars" title="Звездные Войны"
-					alt="Упс! Обнови страничку и попробуй еще раз"></div>
+			<div class="art1"><img src="../img/StarWars.jpg" id="starwars" title="Звездные Войны" alt="Упс! Обнови страничку и попробуй еще раз"></div>
 			<div class="text_interests">Медиафраншиза в жанре эпическая космическая опера, включающая в себя 12
 				художественных фильмов (9 эпизодов основной саги, также известна как «Сага Скайуокеров», 2 фильма
 				«историй» и 1 анимационный), а также игровые и анимационные сериалы, игровые телефильмы, документальные
@@ -134,24 +139,21 @@
 				Лукасом в конце 1970-х годов, позднее расширенной.</div>
 		</div>
 		<div class="interests">
-			<div class="art1"><img src="../img/BacktotheFuture.jpg" id="back_future" title="Назад в будущее"
-					alt="Упс! Обнови страничку и попробуй еще раз"></div>
+			<div class="art1"><img src="../img/BacktotheFuture.jpg" id="back_future" title="Назад в будущее" alt="Упс! Обнови страничку и попробуй еще раз"></div>
 			<div class="text_interests">Подросток Марти с помощью машины времени, сооружённой его другом-профессором
 				доком
 				Брауном, попадает из 80-х в далекие 50-е. Там он встречается со своими будущими родителями, ещё
 				подростками, и другом-профессором, совсем молодым.</div>
 		</div>
 		<div class="interests">
-			<div class="art1"><img src="../img/Naruto.jpg" id="naruto" title="Наруто"
-					alt="Упс! Обнови страничку и попробуй еще раз"></div>
+			<div class="art1"><img src="../img/Naruto.jpg" id="naruto" title="Наруто" alt="Упс! Обнови страничку и попробуй еще раз"></div>
 			<div class="text_interests">Сёнэн-манга Масаси Кисимото, рассказывающая о жизни
 				шумного и непоседливого ниндзя-подростка Наруто Удзумаки, мечтающего достичь всеобщего признания и стать
 				Хокагэ — главой своего селения и сильнейшим ниндзя. Чтобы добиться уважения окружающих, ему предстоит
 				пройти через тысячи препятствий: экзамены ниндзя, различные миссии и сражения.</div>
 		</div>
 		<div class="interests">
-			<div class="art1"><img src="../img/HarryPotter.jpg" id="harrypotter" title="Гарри Поттер"
-					alt="Упс! Обнови страничку и попробуй еще раз"></div>
+			<div class="art1"><img src="../img/HarryPotter.jpg" id="harrypotter" title="Гарри Поттер" alt="Упс! Обнови страничку и попробуй еще раз"></div>
 			<div class="text_interests">Фильм рассказывает, как мальчик-сирота, живший у своих тетей с дядей, тщательно
 				скрывавших его истинное происхождение из-за боязни всего "необычного", в день своего 11-го дня рождения
 				узнает, что он - настоящий волшебник. И мир, в котором Гарри провел свое детство - не его. Теперь, он
