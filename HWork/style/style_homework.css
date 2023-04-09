@@ -1,0 +1,63 @@
+body {
+    background-image: url(../img/fon1.jpg);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    background-size: cover;
+    mask-repeat: repeat;
+}
+
+table,
+tr,
+td {
+    width: 20%;
+    height: 100px;
+    border: 1px solid black;
+    border-spacing: 0;
+    margin: auto;
+    color: indianred;
+    border-color: indianred;
+}
+
+.ladybug {
+    position: absolute;
+    margin-left: 7%;
+    transform: rotate(180deg);
+    filter: opacity(50%)
+}
+/* Задание с круглешками */
+
+.supergrid {
+    width: 60em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.one {
+    border-radius: 50%;
+    background-color: brown;
+    width: 40px;
+    height: 25px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.supergrid1 {
+    width: 60em;
+    display: inline-grid;
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-template-rows: repeat(5, 1fr);
+    /* можно даже не прописывать они по умолчанию в каждую строку будут */
+}
+
+.supergrid2 {
+    width: 60em;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.supergrid3 {
+    width: 60em;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+

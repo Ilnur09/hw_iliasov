@@ -1,0 +1,94 @@
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    body {
+        margin-top: 20%;
+    }
+
+    .menu {
+        justify-content: space-evenly;
+        height: 13%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main {
+        width: 120%;
+        margin-top: 15%;
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    .mainL {
+        flex-direction: column;
+    }
+
+
+    .menu_top,
+    .menu_top_registrations {
+        font-size: 25px;
+    }
+
+    .foto {
+        margin-bottom: 3%;
+    }
+
+    #ilnur {
+        width: 40%;
+        height: 40%;
+    }
+
+    .FIO {
+        margin-bottom: 1%;
+        font-size: 40px;
+    }
+
+    .info,
+    .like {
+        font-size: 20px;
+    }
+
+    .info_hobby {
+        width: 117%;
+        margin: 1%;
+    }
+
+    .game_left,
+    .game_right {
+        width: 30%;
+        justify-items: center;
+    }
+
+    .game1 {
+        width: 95%;
+        height: 95%;
+    }
+
+    .text_game {
+        font-size: 20px;
+        width: 95%;
+        height: auto;
+    }
+
+    .razdel_zagolovok {
+        font-size: 40px;
+        width: 120%;
+    }
+
+    .interests_osnova {
+        width: 119%;
+        margin: 0;
+    }
+
+    .interests {
+        margin: 2%;
+        /* font-size: 20px; */
+        grid-template-rows: 1fr 30%;
+    }
+
+    .art1 {
+        width: 200%;
+    }
+
+    .text_interests {
+        font-size: 20px;
+    }
+}

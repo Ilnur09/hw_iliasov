@@ -1,0 +1,9 @@
+body {
+    background-image: url(../img/fon1.jpg);
+    color: indianred;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+form {
+    margin-left: calc(100% / 2.5);  
+}
