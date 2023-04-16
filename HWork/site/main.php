@@ -203,8 +203,21 @@ if ($time > 10 && $time < 22) {
 
 	<footer class="end">
 		<div>
+			<?php 
+				$sumWord = 0;
+				$url = file_get_contents('../main.php');
+				$sumword = str_word_count($url, 1, '»АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя»');
+				print_r($sumword);
+				// foreach($url as $value){
+				// 	$sumWord = ($value);
+				// 	echo "Колличество слов: $value";
+				// }
+			?>
+		</div>
+		<div>
 			<?php echo 'Сегодня ' . date('d.m.Y'); ?>
 		</div>
+
 	</footer>
 </body>
 
