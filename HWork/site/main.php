@@ -1,11 +1,4 @@
-<?php
-$time = date('G');
-if ($time > 10 && $time < 22) {
-	$time = "../style/style.css";
-} else {
-	$time = "../style/style_night.css";
-}
-?>
+<?php include '../php/time.php' ?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -143,10 +136,10 @@ if ($time > 10 && $time < 22) {
 
 	<footer class="end">
 		<div>
-			<!-- <?php include '../php/sum_word.php'?> Не сделано -->
+			<?php include '../php/date.php' ?>
 		</div>
 		<div>
-			<?php include '../php/date.php' ?>
+			<?php include '../php/sum_word.php' ?> 
 		</div>
 
 	</footer>
