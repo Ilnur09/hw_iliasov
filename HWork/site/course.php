@@ -12,7 +12,7 @@
 
 <body>
     <div class="like">
-        <form action="<? echo $phpCourse ?>" method="post">
+        <form action="./phpcourse.php?l=<? echo $phpCourse ?>" method="post">
             <div>
                 <label for="lab">Выберите лабораторию</label>
                 <select name="login" id="lab">
