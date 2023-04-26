@@ -1,4 +1,4 @@
-<?php include_once '../php//hw_20_04.php' ?>
+<?php include_once '../php/hw_20_04.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
