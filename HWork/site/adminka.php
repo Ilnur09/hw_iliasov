@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +15,7 @@
 <body>
     <div>
         <p><h1>Добро пожаловать. В даный момент страница разрабатывается, заходите позже</h1></p>
+        <p>В последний раз Вы были на странице: <?php echo $_COOKIE['site'] ?></p>
     </div>
 </body>
 </html>

