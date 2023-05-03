@@ -1,9 +1,10 @@
 body {
 	/* background: linear-gradient(0deg, rgba(205,92,92,1) 0%, rgba(4,0,62,1) 100%); */
 	text-align: center;
+	width: 95%;
 	font-size: 17px;
 	font-family: 'Times New Roman', Times, serif;
-	background-image: url(../img/fon1.jpg);
+	/* background-image: url(../img/fon1.jpg); */
 	background-size: cover;
 	color: indianred;
 	border-color: indianred;
@@ -81,7 +82,6 @@ span {
 	box-shadow: 0 0 20px rgb(54, 134, 71);
 	color: rgb(54, 134, 71);
 	border-color: rgb(54, 134, 71);
-	;
 }
 
 /* кнопка регистрация, наведение */
@@ -97,6 +97,36 @@ span {
 	color: rgb(22, 255, 73);
 	border-color: rgb(22, 255, 73);
 	box-shadow: 0 0 40px rgb(22, 255, 73);
+}
+
+/* выбор цвета */
+input {
+	background-color: rgba(240, 248, 255, 0);
+	border: 1px solid;
+	border-radius: 10px;
+	width: 5%;
+	margin-left: 98%;
+	padding: 4px 10px;
+	box-shadow: 0 0 10px rgb(211, 71, 71);
+	color: rgb(211, 71, 71);
+	border-color: rgb(211, 71, 71);
+}
+/* унопка выбора цвета, наведение */
+input:hover {
+	color: rgb(232, 71, 71);
+	border: rgb(232, 71, 71);
+	border-color: rgb(232, 71, 71);
+	box-shadow: 0 0 20px rgb(247, 43, 43);
+}
+
+/* кнопка выбора цвета, активация */
+input:active {
+	transform: scale(0.95);
+	border: 1px solid;
+	color: rgb(217, 44, 44);
+	order: rgb(217, 44, 44);
+	border-color: rgb(217, 44, 44);
+	box-shadow: 0 0 30px rgb(217, 44, 44);
 }
 
 /* Главное о себе (включает всю инфу фото, фио, ) */

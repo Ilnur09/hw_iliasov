@@ -94,6 +94,34 @@ a {
 	border-color: rgb(16, 170, 49);
 	box-shadow: 0 0 40px rgb(16, 170, 49);
 }
+input {
+	background-color: rgba(240, 248, 255, 0);
+	border: 1px solid;
+	border-radius: 10px;
+	width: 100%;
+	padding: 4px 10px;
+	box-shadow: 0 0 20px rgb(164, 60, 60);
+	color: rgb(164, 60, 60);
+	border-color: rgb(164, 60, 60);
+}
+/* унопка выбора цвета, наведение */
+input:hover {
+	border: 1px solid;
+	color: rgb(188, 56, 56);
+	border: rgb(188, 56, 56);
+	border-color: rgb(188, 56, 56);
+	box-shadow: 0 0 40px rgb(188, 56, 56);
+}
+
+/* кнопка выбора цвета, активация */
+input:active {
+	transform: scale(0.95);
+	border: 1px solid;
+	color: rgb(168, 31, 31);
+	order: rgb(168, 31, 31);
+	border-color: rgb(168, 31, 31);
+	box-shadow: 0 0 50px rgb(168, 31, 31);
+}
 
 /* Главное о себе (включает всю инфу фото, фио, ) */
 .main {

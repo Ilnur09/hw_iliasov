@@ -1,13 +1,5 @@
 <?php
 session_start();
-setcookie('site', 'http://homework/hw_iliasov/HWork/site/singIn.php', time() + 3600 * 60 * 24);
-$_COOKIE['site'] = $_POST['site'];
-if(isset($_COOKIE['site'])){
-    $lastUrl = $_COOKIE['site'];
-    setcookie('site', $lastUrl, time()+3600*60*24);
-}
-
-
 include_once '../php/hw_20_04.php'
 ?>
 
@@ -42,9 +34,9 @@ include_once '../php/hw_20_04.php'
             </div>
             <br>
             <div>
-                <a href="./fact.php" name="site">ФАКТ</a>
+                <a href="./fact.php">ФАКТ</a>
                 <span> / </span>
-                <a href="./bitrix.php" name="site">Битрикс24</a>
+                <a href="./bitrix.php">Битрикс24</a>
             </div>
         </form>
 

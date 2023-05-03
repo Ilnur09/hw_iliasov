@@ -1,8 +1,12 @@
+<?php
+session_start();
+?>
 <?php include_once '../function/timeDayNight.php' ?>
-<?php include_once '../function/sum_word.php'?>
+<?php include_once '../function/sum_word.php' ?>
 <?php include_once '../function/date.php' ?>
-<?php  ?>
-<?php  ?>
+<?php include_once '../function/fonColor.php' ?>
+<?php include_once '../php/DownloadFoto.php' ?>
+<?php ?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -20,10 +24,20 @@
 	<title>Моя первая страничка</title>
 </head>
 
-<body>
+<body style="background-color: <?php echo FonColor() ?>;">
 	<header>
 		<div class="menu">
-		<?php include_once '../php/top_menu.php' ?>
+			<?php include_once '../php/top_menu.php' ?>
+		</div>
+		<div>
+			<form action="" method="post">
+				<input type="color" name="color" value=<?php echo FonColor() ?>>
+				<input type="submit" value="Применить">
+			</form>
+			<form action="" method="post" enctype="multipart/form-data">
+				<input id="downldFoto" type="file" name="file">
+				<input type="submit" value="Загрузить">
+			</form>
 		</div>
 	</header>
 	<div class="main">

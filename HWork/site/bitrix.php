@@ -1,6 +1,6 @@
 <?php
 session_start();
-setcookie('site', 'http://homework/hw_iliasov/HWork/site/bitrix.php', time() + 3600 * 60 * 24);
+setcookie('site', 'bitrix.php', time()+3600*60*24);
 ?>
 
 <!DOCTYPE html>
