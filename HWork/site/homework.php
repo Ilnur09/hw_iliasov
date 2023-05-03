@@ -47,7 +47,6 @@ foreach ($arrFile1 as $value1) {
 
 <body>
     <header>
-
     </header>
     <div>
         <h2>Домашняя работа от 27.04.2023</h2>
