@@ -23,7 +23,7 @@ a {
 	/* float: left; */
 	background-image: url(../img/fon1_night.jpg);
 	display: flex;
-	justify-content: space-around;
+	justify-content: end;
 	align-items: center;
 	position: fixed;
 	width: 100%;

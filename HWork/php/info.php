@@ -17,7 +17,8 @@ $forme = 'Привет! Начал изучать програмирование
 $formeMasiv = explode(' . ', $forme);
 foreach ($formeMasiv as $item) {
     if (mb_substr($item, -1) == '.') {
-        echo '<div><span style = "color: white;">Привет! Начал изучать програмирование самостоятельно,
+        // для окрашивания <span style = "color: white;">
+        echo '<div><span> Привет! Начал изучать програмирование самостоятельно,
         <br>
         потому что в ПК уже стало слишком скучно.</span>
         <br>
@@ -29,7 +30,7 @@ foreach ($formeMasiv as $item) {
         <br>
         Пришел на данный курс получать знания.
         <br>
-        Люблю видеоигры, музыку и играть музыку.</span></div>';
+        Люблю видеоигры, музыку и играть музыку.</span></div>'; 
     } else {
         echo $forme . ' ';
     }

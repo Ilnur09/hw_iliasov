@@ -1,8 +1,28 @@
+<?php
+session_start();
+?>
 <?php include_once '../function/timeDayNight.php' ?>
-<?php include_once '../function/sum_word.php'?>
+<?php include_once '../function/sum_word.php' ?>
 <?php include_once '../function/date.php' ?>
-<?php  ?>
-<?php  ?>
+<?php include_once '../function/registration.php' ?>
+<?php
+$hostname = 'localhost';
+$username = 'Ilnur';
+$password = 907;
+$dbname = 'SignIn';
+$connect = mysqli_connect($hostname, $username, $password, $dbname);
+// Создал БД
+// mysqli_query($connect, "CREATE DATABASE $dbname");
+
+// Добавил таблицу.
+// mysqli_select_db($connect, $dbname);
+// mysqli_query($connect, "CREATE TABLE Users(
+// id_person INT(6) AUTO_INCREMENT PRIMARY KEY,
+// registration_login VARCHAR(20) NOT NULL,
+// registration_password VARCHAR(30) NOT NULL,
+// registration_email VARCHAR(30) NOT NULL
+// )");
+?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -23,7 +43,10 @@
 <body>
 	<header>
 		<div class="menu">
-		<?php include_once '../php/top_menu.php' ?>
+			<div>
+				<?php user() ?>
+			</div>
+			<?php include_once '../php/top_menu.php' ?>
 		</div>
 	</header>
 	<div class="main">
@@ -46,9 +69,10 @@
 	</div>
 	<br>
 	<br>
-
+	<div>
+		<p class="razdel_zagolovok">Любимые игры</p>
+	</div>
 	<div class="info_hobby">
-		<!-- <div><p class="razdel_zagolovok">Любимы игры</p></div> -->
 		<div class="game_left">
 			<div class="game1"><img id="AC" src="../img/AC.jpg" title="Assassin'sCreed" alt="Упс! Попробуй обновить страницу =)"></div>
 			<?php include_once '../php/gameAC.php' ?>
@@ -77,11 +101,11 @@
 
 	<footer class="end">
 		<div>
-			<?php dateHB() ?>
+			<!-- <?php dateHB() ?> -->
 		</div>
 		<div>
 
-			<?php sum_word() ?>
+			<!-- <?php sum_word() ?> -->
 		</div>
 
 	</footer>

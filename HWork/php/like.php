@@ -16,8 +16,8 @@ $otzivMassiv = explode(' ', $otziv);
 // print_r($otzivMassiv);
 foreach ($otzivMassiv as $key => $item) {
     if (($key % 2) == 0) {
-        echo '<span style = "color: rgb(255, 0, 0);"> ' . $item . ' </span>';
+        echo '<span> ' . $item . ' </span>'; // для окрашивания'<span style = "color: rgb(255, 0, 0);"> ' . $item . ' </span>';
     } else {
-        echo '<span style = "color: rgb(255, 187, 0);"> ' . $item . ' </span>';
+        echo '<span> ' . $item . ' </span>'; // для окрашивания '<span style = "color: rgb(255, 187, 0);"> ' . $item . ' </span>';
     }
 }
