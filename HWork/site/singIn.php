@@ -1,4 +1,7 @@
 <?php include_once '../php/logpass.php' ?>
+<?php
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

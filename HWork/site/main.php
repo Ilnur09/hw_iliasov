@@ -44,7 +44,7 @@ $connect = mysqli_connect($hostname, $username, $password, $dbname);
 	<header>
 		<div class="menu">
 			<div>
-				<?php user() ?>
+				<?php $_COOKIE['User'] ?>
 			</div>
 			<?php include_once '../php/top_menu.php' ?>
 		</div>
