@@ -1,16 +1,15 @@
 <?php
 session_start();
-?>
-<?php include_once '../function/timeDayNight.php' ?>
-<?php include_once '../function/sum_word.php' ?>
-<?php include_once '../function/date.php' ?>
-<?php include_once '../function/registration.php' ?>
-<?php
-$hostname = 'localhost';
-$username = 'Ilnur';
-$password = 907;
-$dbname = 'SignIn';
-$connect = mysqli_connect($hostname, $username, $password, $dbname);
+if(isset($_COOKIE['User']) ? $_COOKIE['User'] : $_COOKIE['User'] = ' ');
+include_once '../function/timeDayNight.php';
+include_once '../function/sum_word.php';
+include_once '../function/date.php';
+include_once '../function/registration.php';
+
+require '../function/signindb.php';
+
+$signIn = new signin('localhost', 'Ilnur', 907, 'SignIn');
+
 // Создал БД
 // mysqli_query($connect, "CREATE DATABASE $dbname");
 
@@ -43,8 +42,8 @@ $connect = mysqli_connect($hostname, $username, $password, $dbname);
 <body>
 	<header>
 		<div class="menu">
-			<div>
-				<?php $_COOKIE['User'] ?>
+			<div style="margin-right: 5%;">
+				<?php echo "Добро пожаловать " . $_COOKIE['User'] ?>
 			</div>
 			<?php include_once '../php/top_menu.php' ?>
 		</div>

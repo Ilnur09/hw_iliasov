@@ -35,7 +35,3 @@ foreach ($formeMasiv as $item) {
         echo $forme . ' ';
     }
 }
-
-// print_r($formeMasiv);
-
-// echo $forme;

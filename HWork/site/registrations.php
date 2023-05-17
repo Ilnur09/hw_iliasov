@@ -1,27 +1,23 @@
 <?php
+include_once '../function/registration.php';
+include_once '../function/timeDayNight.php';
+require '../function/signindb.php'; // файл подключения к БД.
+
 session_start();
-setcookie('User', 'NoName');
-$main = 'http://homework/hw_iliasov/HWork/site/main.php';
-$hostname = 'localhost';
-$username = 'Ilnur';
-$password = 907;
-$dbname = 'SignIn';
-$connect = mysqli_connect($hostname, $username, $password, $dbname) or die("Упаньки");
+$main = 'http://homework/hw_iliasov/HWork/site/index.php';
 
-
-
-// print_r($mysql_login);
+$signIn = new signin('localhost', 'Ilnur', 907, 'SignIn');
 
 if (!empty($_POST['registration_login']) && !empty($_POST['registration_password']) && !empty($_POST['registration_email'])) {
     $proverkaLogina = $_POST['registration_login'];
-    $mysql_login = mysqli_query($connect, "SELECT * FROM Users WHERE registration_login = '" . $proverkaLogina . "';");
+    $mysql_login = mysqli_query($signIn->connect, "SELECT * FROM Users WHERE registration_login = '" . $proverkaLogina . "';");
     $mysql_loginRows = mysqli_num_rows($mysql_login);
     if ($mysql_loginRows == 0) {
         $registrationLogin = $_POST['registration_login'];
         $registrationPassword = md5($_POST['registration_password']); // Шифрую пароль
         $registrationEmail = $_POST['registration_email'];
         $insert = "INSERT INTO Users (registration_login, registration_password, registration_email) VALUE ('$registrationLogin', '$registrationPassword', '$registrationEmail');";
-        mysqli_query($connect, $insert);
+        mysqli_query($signIn->connect, $insert);
         setcookie('User', $registrationLogin, time()+3600*60*30*24, '/');
         header('Location: ' . $main);
     } else {
@@ -29,11 +25,7 @@ if (!empty($_POST['registration_login']) && !empty($_POST['registration_password
     }
 }
 
-
 ?>
-
-<?php include_once '../function/registration.php' ?>
-<?php include_once '../function/timeDayNight.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,42 +61,6 @@ if (!empty($_POST['registration_login']) && !empty($_POST['registration_password
             <br>
             <br>
             <input type="submit" value="Всё, я справился с заполнением формы">
-
-            <!-- <label for="registration_course">Что Вы изучали?</label>
-            <select name="select" id="registration_course">
-                <option value="php">PHP</option>
-                <option value="C#">C#</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="htnl">HTML</option>
-                <option value="java">Java</option>
-                <option value="python">Python</option>
-            </select>
-            <br>
-            <br>
-            <fieldset>
-                <legend>Что Вы изучали?</legend>
-                <input type="radio" name="I want to be" value="junior">Junior PHP Devolper
-                <input type="radio" name="I want to be" value="middle">Middle PHP Devolper
-                <input type="radio" name="I want to be" value="Fronted">Fronted PHP Devolper
-                <input type="radio" name="I want to be" value="designer">Нееее, хочу быть дизайнером
-            </fieldset>
-            <br>
-            <br>
-            <fieldset style="width: 66%;">
-                <legend>Мои навыки програмирования</legend>
-                <input type="checkbox" name="My skil prog" value="god">Бог програмировани
-                <input type="checkbox" name="My skil prog" value="guru">Гуру програмировани
-                <input type="checkbox" name="My skil prog" value="learning">Я только обучаюсь
-            </fieldset>
-            <br>
-            <br>
-            <label for="time_learning">Во сколько мне удобно приходить на занятия?</label>
-            <input type="datetime-local" name="date" id="time_learning" style="margin-left: 10px;">
-            <br>
-            <br>
-            <label for="wish_course">Мои пжелания и комментарии по курсам</label>
-            <textarea name="wish" id="wish_course" style="margin-left: 45px;"></textarea> -->
-
         </form>
     </div>
 

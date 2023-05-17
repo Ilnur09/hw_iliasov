@@ -5,9 +5,7 @@ function sum_word()
     $sum = 0;
     $glasnyeMas = explode(',', $glasnye); // Пусть будет на всякий.
     $file = file_get_contents('./main.php'); // обращение к файлу
-    // var_dump($file);
     $fileSplit = mb_str_split($file); // разделил слова
-    // print_r($fileSplit);
     $wordSum = str_word_count($file); // поиск колличества слов
     foreach ($fileSplit as $value) {
         if (in_array($value, $glasnyeMas)) {
